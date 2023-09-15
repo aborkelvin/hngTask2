@@ -1,27 +1,36 @@
-# HNG TASK 2 - REST API FOR CRUD OPERATIONS ON A PERSON RESOURCE
-
-## Project Description
-
-This is a simple REST API that enables CRUD (Create, Read, Update, Delete) operations on a "person" resource. It was developed as part of the second task for the HNG Internship program.
+# HNG TASK 2 - REST API DOCUMENTATION
 
 ## Table of Contents
 
-1. [Getting Started](#getting-started)
-   - [Installation](#installation)
-   - [Usage](#usage)
-2. [Endpoints](#endpoints)
-3. [Technologies Used](#technologies-used)
-4. [Testing](#testing)
-5. [Deployment](#deployment)
+1. [Introduction](#introduction)
+2. [Getting Started](#getting-started)
+   - [Option 1: Local Installation](#option-1-local-installation)
+   - [Option 2: Using the Deployed API](#option-2-using-the-deployed-api)
+3. [API Endpoints](#api-endpoints)
+   - [CREATE: Adding a New Person](#create-adding-a-new-person)
+   - [READ: Fetching Details of a Person](#read-fetching-details-of-a-person)
+   - [UPDATE: Modifying Details of an Existing Person](#update-modifying-details-of-an-existing-person)
+   - [DELETE: Removing a Person](#delete-removing-a-person)
+4. [Technologies Used](#technologies-used)
+5. [Testing](#testing)
+6. [Deployment](#deployment)
+
+## Introduction
+
+Welcome to the documentation for the HNG Task 2 REST API. This API enables CRUD (Create, Read, Update, Delete) operations on a "person" resource. It was developed as part of the second task for the HNG Internship program.
 
 ## Getting Started
 
-### Installation
+### Option 1: Local Installation
 
-To run or deploy this API, ensure that you have Node.js and npm (Node Package Manager) installed. Then, follow these steps:
+#### Installation
+
+To run or deploy this API locally, ensure that you have Node.js and npm (Node Package Manager) installed. Then, follow these steps:
 
 1. Clone this repository to your local machine.
+
 2. Navigate to the project directory using your terminal.
+
 3. Create a `.env` file in the root directory of the project and add your MongoDB connection URL as follows:
 
    ```plaintext
@@ -34,18 +43,26 @@ To run or deploy this API, ensure that you have Node.js and npm (Node Package Ma
     ```
     This command will automatically install all the necessary dependencies specified in the `package.json` file.
 
-### Usage
-
 To run the API locally, use the following command:
 
-```bash
-npm start
-```
-The API will be accessible at http://localhost:3000/api. You can make HTTP requests to this URL to interact with the endpoints.
+    ```base
+    npm start
+    ```
 
-#### Endpoints
+The Api will be accessible at http://localhost:3000/api. You can make HTTP requests to this URL to interact with the endpoints.
 
-**CREATE: Adding a new person**
+### Option 2: Using the Deployed Api
+
+The API has been deployed on Render and is accessible at the following URL:
+
+https://anthonyabor-hngtask2.onrender.com/api
+
+You can make HTTP requests directly to this URL to interact with the deployed API without the need for local installation.
+
+
+## Api Endpoints
+
+### CREATE: Adding a New Person
 
 - **Endpoint:** `/api`
 - **Method:** POST
@@ -69,7 +86,7 @@ The API will be accessible at http://localhost:3000/api. You can make HTTP reque
 
     ```
 
-**READ: Fetching details of a person**
+### READ: Fetching details of a person
 
 - **Endpoint:** `/api/:user_id`
 - **Method:** GET
@@ -90,7 +107,7 @@ The API will be accessible at http://localhost:3000/api. You can make HTTP reque
 
 
 
-**UPDATE: Modifying details of an existing person**
+### UPDATE: Modifying details of an existing person
 
 - **Endpoint:** `/api/:user_id`
 - **Method:** PATCH
@@ -115,7 +132,7 @@ The API will be accessible at http://localhost:3000/api. You can make HTTP reque
     ```
 
 
-**DELETE: Removing a person**
+### DELETE: Removing a person
 
 - **Endpoint:** `/api/:user_id`
 - **Method:** DELETE
@@ -148,4 +165,4 @@ The API has been deployed on Render and is accessible at the following URL:
 
 [https://anthonyabor-hngtask2.onrender.com/api](https://anthonyabor-hngtask2.onrender.com/api)
 
-For more detailed information on how to use the API, please refer to the [documentation](DOCUMENTATION.md) provided in this repository.
+
