@@ -23,7 +23,7 @@ app.get('/', (req, res) => {
 // Create a person
 app.post('/api', (req,res)=> {
 
-    const {name, age} = req.body;
+    const {name} = req.body;
     console.log(req.body);
     if(!name){
         return res.status(400).json({
@@ -31,14 +31,18 @@ app.post('/api', (req,res)=> {
         })
     }
     const person = new Person({
-        name,
-        age
+        name     
     })
     person.save()
     .then( (result) => {
         res.json(result);
     })
     .catch( (err) => {
+        if(err.code === 11000){
+            return res.status(400).json({
+                message: 'Duplicate name',
+            })
+        }
         res.status(500).json({
             message: 'Something went wrong',
         })

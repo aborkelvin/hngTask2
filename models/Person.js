@@ -4,11 +4,8 @@ const PersonSchema = new mongoose.Schema({
     name:{
         type:String,
         required:true,
-    },
-    age:{
-        type:Number,
-        required:false,
-    },
+        unique:true,
+    },    
 })
 
 const Person = mongoose.model('Person', PersonSchema);
